@@ -1,0 +1,24 @@
+{
+  "name": "projectname",
+  "version": "1.0.0",
+  "description": "Project description",
+  "author": "Mikhail Brazhnik",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp-rename": "^1.2.2",
+    "del": "^3.0.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-image-resize": "^0.13.0",
+    "browser-sync": "^2.24.4",
+    "gulp-rsync": "0.0.8",
+    "gulp-notify": "^3.2.0"
+  }
+}

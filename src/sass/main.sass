@@ -1,0 +1,141 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+@import "_mixins/emizer"
+
+::placeholder
+  color: #c0c0c0
+
+::selection
+  color: #ffffff
+  background-color: $accent-green
+
+body
+  position: relative
+  overflow-x: hidden
+  min-width: 320px
+  color: $light-text
+  font-family: $text
+  font-size: $browser-context
+  line-height: 1.65
+  background-color: #000000
+  input, textarea
+    margin: 0
+    padding: 0
+    outline: none
+
+.img-responsive
+  display: block
+  max-width: 100%
+  height: auto
+  &.img-width
+    width: 100%
+
+b, strong
+  font-weight: bold
+
+a:hover
+    text-decoration: none
+
+ul
+  margin: 0
+  padding: 0
+  list-style: none
+
+h1, h2, h3, h4, h5, h6
+  margin: 0
+  padding: 0
+  font-family: $title
+
+h2
+  font-size: em(36px)
+
+p
+  margin: 0
+  padding: 0
+
+.example-img
+  width: 100%
+
+.lazy-container // Lazy Load Placeholder Generator: https://webdesign-master.ru/services/lazy/
+  background-image: url(data:image/gif;base64,R0lGODlhCgAIAIABAN3d3f///yH5BAEAAAEALAAAAAAKAAgAAAINjAOnyJv2oJOrVXrzKQA7)
+
+// Custom SASS
+.accordionjs
+  margin: 0 auto
+
+.accordionjs__btn
+  margin-bottom: 20px
+  height: 100px
+  font-family: $text
+  font-size: 16px
+  font-weight: normal
+  letter-spacing: 1.2px
+  text-align: center
+  color: $light-text
+  border: solid 2px #c4c4c4
+  border-radius: 20px 0 20px 0
+  cursor: pointer
+  &:hover
+    background-color: rgba(213, 0, 0, 0.7)
+
+.acc_active .accordionjs__btn
+  background-color: rgba(213, 0, 0, 0.7)
+
+.accordionjs__title
+  position: relative
+  margin-left: 64px
+  line-height: 100px
+  &::before
+    content: ''
+    position: absolute
+    top: 50%
+    left: -70px
+    margin-top: -32px
+    width: 64px
+    height: 64px
+    background-size: 100%
+    background-repeat: no-repeat
+
+.accordionjs__img
+  overflow: hidden
+  margin-bottom: 20px
+  max-width: 410px
+  border-radius: 20px
+
+.accordionjs__title--repair
+  &::before
+    background-image: url(../img/@2x/car-repair@2x.png)
+
+.accordionjs__title--paint
+   &::before
+    background-image: url(../img/@2x/car-paint@2x.png)
+
+.accordionjs__title--polish
+   &::before
+    background-image: url(../img/@2x/car-polish@2x.png)
+
+.accordionjs__items
+  font-size: 16px
+
+.accordionjs__item
+  margin-bottom: 20px
+  &:last-child
+    margin-bottom: 20px
+
+@for $i from 1 through 10
+  .accordionjs__item-#{$i}
+    position: relative
+    &::before
+      content: '0#{$i}'
+      margin-right: 5px
+      background-image: linear-gradient(to top, #d50000, #ff5f5f), linear-gradient(to bottom, #d50000, #d50000)
+      font-family: $title
+      font-size: 22px
+      font-weight: bold
+      line-height: normal
+      letter-spacing: 1.65px
+      background-clip: text
+      -webkit-text-fill-color: transparent
+
+@import "media" // Медиа запросы. Всегда в конце.
